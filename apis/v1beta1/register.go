@@ -13,7 +13,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "template.upbound.io"
+	Group   = "github.kurtis.dev.br"
 	Version = "v1beta1"
 )
 
