@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - github.kurtis.dev.br_providerconfigs.yaml
+  - github.kurtis.dev.br_storeconfigs.yaml
+  - branch.kurtis.dev.br_branches.yaml
+  - repository.kurtis.dev.br_repositories.yaml
+  - github.kurtis.dev.br_providerconfigusages.yaml
