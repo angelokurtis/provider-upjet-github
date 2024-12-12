@@ -19,6 +19,12 @@ import (
 )
 
 const (
+	keyBaseURL = "base_url"
+	keyOwner   = "owner"
+	keyToken   = "token"
+)
+
+const (
 	// error messages
 	errNoProviderConfig     = "no providerConfigRef provided"
 	errGetProviderConfig    = "cannot get referenced ProviderConfig"
@@ -63,10 +69,11 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		// Set credentials in Terraform provider configuration.
-		/*ps.Configuration = map[string]any{
-			"username": creds["username"],
-			"password": creds["password"],
-		}*/
+		ps.Configuration = map[string]any{
+			keyBaseURL: creds[keyBaseURL],
+			keyOwner:   creds[keyOwner],
+			keyToken:   creds[keyToken],
+		}
 		return ps, nil
 	}
 }
