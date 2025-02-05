@@ -69,10 +69,15 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		// Set credentials in Terraform provider configuration.
-		ps.Configuration = map[string]any{
-			keyBaseURL: creds[keyBaseURL],
-			keyOwner:   creds[keyOwner],
-			keyToken:   creds[keyToken],
+		ps.Configuration = map[string]any{}
+		if v, ok := creds[keyBaseURL]; ok {
+			ps.Configuration[keyBaseURL] = v
+		}
+		if v, ok := creds[keyOwner]; ok {
+			ps.Configuration[keyOwner] = v
+		}
+		if v, ok := creds[keyToken]; ok {
+			ps.Configuration[keyToken] = v
 		}
 		return ps, nil
 	}
