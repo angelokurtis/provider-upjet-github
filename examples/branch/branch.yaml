@@ -1,4 +1,4 @@
-apiVersion: branch.github.upbound.io/v1alpha1
+apiVersion: branch.kurtis.dev.br/v1alpha1
 kind: Branch
 metadata:
   name: hello-upjet

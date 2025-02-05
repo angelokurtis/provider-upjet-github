@@ -1,4 +1,4 @@
-apiVersion: repository.github.upbound.io/v1alpha1
+apiVersion: repository.kurtis.dev.br/v1alpha1
 kind: Repository
 metadata:
   name: hello-crossplane
