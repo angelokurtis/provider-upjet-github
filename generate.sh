@@ -14,3 +14,5 @@ export TERRAFORM_PROVIDER_VERSION=6.5.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME=terraform-provider-github
 export TERRAFORM_NATIVE_PROVIDER_BINARY=terraform-provider-github_v5.32.0
 export TERRAFORM_DOCS_PATH=website/docs/r
+go install golang.org/x/tools/cmd/goimports@latest
+make generate
